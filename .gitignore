@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Images (add specific if too large; use .gitattributes for large files)
+assets/images/*.jpg
+assets/images/*.png
+# But keep small images - remove above if needed
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+
+# Build outputs (if adding build tools later)
+dist/
+build/
+
+# Live Server temp files
+.vscode-launch.json

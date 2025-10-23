@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Harmony PG</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/navigation.css">
+    <link rel="stylesheet" href="assets/css/gallery.css">
+</head>
+<body>
+    <!-- Navigation (copy from index.html) -->
+    <header class="fixed w-full z-50 transition-all duration-300 nav-transparent">
+        <!-- Copy full nav -->
+    </header>
+
+    <!-- Gallery Section -->
+    <section class="pt-20 py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-dark mb-4">Photo Gallery</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Explore our beautiful rooms and facilities through these photos</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="gallery-item overflow-hidden rounded-lg shadow-lg cursor-pointer" onclick="openLightbox('assets/images/gallery-room1.jpg')">
+                    <img src="assets/images/gallery-room1.jpg" alt="Single room interior" class="w-full h-64 object-cover">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-lg cursor-pointer" onclick="openLightbox('assets/images/gallery-room2.jpg')">
+                    <img src="assets/images/gallery-room2.jpg" alt="Common lounge area" class="w-full h-64 object-cover">
+                </div>
+                <!-- Add 8-10 more gallery items with different images -->
+                <div class="gallery-item overflow-hidden rounded-lg shadow-lg cursor-pointer" onclick="openLightbox('assets/images/gallery-facility1.jpg')">
+                    <img src="assets/images/gallery-facility1.jpg" alt="Kitchen facilities" class="w-full h-64 object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img" src="" alt="Enlarged image">
+    </div>
+
+    <!-- Back Link -->
+    <div class="container mx-auto px-4 py-8">
+        <a href="index.html" class="text-primary hover:underline">← Back to Home</a>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/gallery.js"></script>
+</body>
+</html>
