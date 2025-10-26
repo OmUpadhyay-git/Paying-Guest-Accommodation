@@ -82,7 +82,7 @@ cd "Paying-Guest-Accommodation"
 
 3. **Install Live Server (VS Code Extension)**
 - Go to Extensions (Ctrl+Shift+X)
-- Search "Live Server" by Ritwick Dey
+- Search "Live Server".
 - Install and reload
 
 4. **Run Locally**
