@@ -110,7 +110,7 @@ cd "Paying-Guest-Accommodation"
 ### Example: Adding a New Room Type
 
 In `index.html`, add to the rooms section:
-<div id="quad-room" class="hidden"> <div class="grid grid-cols-1 md:grid-cols-2 gap-8"> <div class="bg-white rounded-lg overflow-hidden shadow-lg room-card"> <img src="asset/image/quad-shared.jpg" alt="Quad sharing room" class="w-full h-64 object-cover"> <div class="p-6"> <h3 class="text-xl font-bold mb-2">Quad Sharing</h3> <p class="text-gray-600 mb-4">Budget-friendly option for 4 students.</p> <div class="flex justify-between items-center"> <span class="text-xl font-bold text-primary">₹4,500<small>/month</small></span> <a href="contact.html#book-now" class="bg-primary text-white px-4 py-2 rounded-full">Book Now</a> </div> </div> </div> </div> </div> ```
+<div id="quad-room" class="hidden"> <div class="grid grid-cols-1 md:grid-cols-2 gap-8"> <div class="bg-white rounded-lg overflow-hidden shadow-lg room-card"> <img src="asset/image/triple-standard.jpg" alt="Quad sharing room (placeholder)" class="w-full h-64 object-cover"> <div class="p-6"> <h3 class="text-xl font-bold mb-2">Quad Sharing</h3> <p class="text-gray-600 mb-4">Budget-friendly option for 4 students.</p> <div class="flex justify-between items-center"> <span class="text-xl font-bold text-primary">₹4,500<small>/month</small></span> <a href="contact.html#book-now" class="bg-primary text-white px-4 py-2 rounded-full">Book Now</a> </div> </div> </div> </div> </div> ```
 Update tabs and JS accordingly.
 
 │       ├── navigation.js     # Mobile menu toggle
