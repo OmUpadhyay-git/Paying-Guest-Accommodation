@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About | Elite PG Residency</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <header class="site-header small">
+    <nav class="nav">
+      <a class="brand" href="index.html"><img src="images/logo.png" alt="Elite PG logo" /><span>Elite PG Residency</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+      <ul id="nav-menu" class="nav-menu">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a class="active" href="about.html">About</a></li>
+        <li><a href="rooms.html">Rooms</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a class="cta" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container section">
+    <h1>About Elite PG</h1>
+    <p>Elite PG offers a safe, welcoming environment near universities and business hubs with modern facilities, dependable services, and a community vibe.</p>
+
+    <div class="pill-grid">
+      <div class="pill">Walking distance to major universities</div>
+      <div class="pill">Near metro & bus stops</div>
+      <div class="pill">Hospitals nearby</div>
+      <div class="pill">Malls & restaurants within 1 km</div>
+      <div class="pill">Banks & ATMs around</div>
+      <div class="pill">Safe, well‑lit area</div>
+    </div>
+
+    <h2>Facility Highlights</h2>
+    <div class="amenities-grid">
+      <div class="amenity"><span class="icon">🎥</span><h3>CCTV</h3><p>Surveillance across premises.</p></div>
+      <div class="amenity"><span class="icon">🔑</span><h3>Access Control</h3><p>Biometric & visitor management.</p></div>
+      <div class="amenity"><span class="icon">⚡</span><h3>Power Backup</h3><p>Uninterrupted essentials.</p></div>
+      <div class="amenity"><span class="icon">🧑‍🍳</span><h3>Meals</h3><p>Nutritious 3‑time meal plans.</p></div>
+      <div class="amenity"><span class="icon">📚</span><h3>Study Hall</h3><p>Quiet, well‑lit study spaces.</p></div>
+      <div class="amenity"><span class="icon">🅿️</span><h3>Parking</h3><p>On‑site safe parking.</p></div>
+    </div>
+
+    <h2>FAQ</h2>
+    <div class="accordion" id="faq">
+      <button class="accordion-header" aria-expanded="false">Are utilities included?</button>
+      <div class="accordion-panel"><p>Wi‑Fi, power backup, and hot water are included in plans.</p></div>
+
+      <button class="accordion-header" aria-expanded="false">Do you offer trial stays?</button>
+      <div class="accordion-panel"><p>Yes, subject to availability and seasonal schedules.</p></div>
+
+      <button class="accordion-header" aria-expanded="false">Is there curfew?</button>
+      <div class="accordion-panel"><p>For safety, check‑in/out windows apply; details at booking.</p></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="copy">© <span id="year"></span> Elite PG Residency</div>
+  </footer>
+
+  <script src="js/navigation.js"></script>
+  <script src="js/animations.js"></script>
+  <script>
+    document.querySelectorAll('.accordion-header').forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        const expanded = btn.getAttribute('aria-expanded')==='true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const panel = btn.nextElementSibling;
+        panel.style.maxHeight = !expanded ? panel.scrollHeight+'px' : 0;
+      });
+    });
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>

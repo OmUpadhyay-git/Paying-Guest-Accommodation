@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gallery | Elite PG Residency</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/lightbox.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <header class="site-header small">
+    <nav class="nav">
+      <a class="brand" href="index.html"><img src="images/logo.png" alt="Elite PG logo" /><span>Elite PG Residency</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+      <ul id="nav-menu" class="nav-menu">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="rooms.html">Rooms</a></li>
+        <li><a class="active" href="gallery.html">Gallery</a></li>
+        <li><a class="cta" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container section">
+    <h1>Gallery</h1>
+    <div class="gallery-filters">
+      <button class="tag" data-group="all">All</button>
+      <button class="tag" data-group="rooms">Rooms</button>
+      <button class="tag" data-group="common">Common Areas</button>
+      <button class="tag" data-group="facilities">Facilities</button>
+    </div>
+
+    <div id="galleryGrid" class="gallery-grid">
+      <!-- Rooms -->
+      <a href="images/gallery/room-1.jpg" class="gallery-item" data-group="rooms">
+        <img src="images/gallery/room-1.jpg" alt="Room view 1" />
+      </a>
+      <a href="images/gallery/room-2.jpg" class="gallery-item" data-group="rooms">
+        <img src="images/gallery/room-2.jpg" alt="Room view 2" />
+      </a>
+
+      <!-- Common -->
+      <a href="images/gallery/common-1.jpg" class="gallery-item" data-group="common">
+        <img src="images/gallery/common-1.jpg" alt="Common area 1" />
+      </a>
+      <a href="images/gallery/common-2.jpg" class="gallery-item" data-group="common">
+        <img src="images/gallery/common-2.jpg" alt="Common area 2" />
+      </a>
+      <a href="images/gallery/recreation.jpg" class="gallery-item" data-group="common">
+        <img src="images/gallery/recreation.jpg" alt="Recreation room" />
+      </a>
+      <a href="images/gallery/study-hall.jpg" class="gallery-item" data-group="common">
+        <img src="images/gallery/study-hall.jpg" alt="Study hall" />
+      </a>
+
+      <!-- Facilities -->
+      <a href="images/gallery/kitchen.jpg" class="gallery-item" data-group="facilities">
+        <img src="images/gallery/kitchen.jpg" alt="Kitchen" />
+      </a>
+      <a href="images/gallery/laundry.jpg" class="gallery-item" data-group="facilities">
+        <img src="images/gallery/laundry.jpg" alt="Laundry" />
+      </a>
+      <a href="images/gallery/parking.jpg" class="gallery-item" data-group="facilities">
+        <img src="images/gallery/parking.jpg" alt="Parking" />
+      </a>
+      <a href="images/gallery/entrance.jpg" class="gallery-item" data-group="facilities">
+        <img src="images/gallery/entrance.jpg" alt="Entrance" />
+      </a>
+    </div>
+  </main>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Image viewer">
+    <button class="lb-close" aria-label="Close">×</button>
+    <button class="lb-prev" aria-label="Previous">‹</button>
+    <div class="lb-stage">
+      <img class="lb-image" alt="" />
+      <div class="lb-counter" aria-live="polite"></div>
+      <button class="lb-zoom" aria-label="Zoom">⤢</button>
+    </div>
+    <button class="lb-next" aria-label="Next">›</button>
+  </div>
+
+  <footer class="site-footer">
+    <div class="copy">© <span id="year"></span> Elite PG Residency</div>
+  </footer>
+
+  <script src="js/navigation.js"></script>
+  <script src="js/lightbox.js"></script>
+  <script>
+    // Filter buttons
+    const gBtns = document.querySelectorAll('.gallery-filters .tag');
+    const gItems = document.querySelectorAll('#galleryGrid .gallery-item');
+    gBtns.forEach(b=>b.addEventListener('click', ()=>{
+      const group = b.dataset.group;
+      gItems.forEach(i=>{
+        i.style.display = (group==='all' || i.dataset.group===group) ? '' : 'none';
+      });
+    }));
+  </script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

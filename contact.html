@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact & Booking | Elite PG</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <header class="site-header small">
+    <nav class="nav">
+      <a class="brand" href="index.html"><img src="images/logo.png" alt="Elite PG logo" /><span>Elite PG Residency</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+      <ul id="nav-menu" class="nav-menu">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="rooms.html">Rooms</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a class="active cta" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container section" id="enquiry">
+    <h1>Booking Enquiry</h1>
+    <p>Please fill the form below, and the team will get back shortly.</p>
+
+    <form id="contactForm" class="form card" novalidate>
+      <div class="grid-2">
+        <label>Full Name
+          <input type="text" name="name" required minlength="2" placeholder="Your name" />
+          <span class="error"></span>
+        </label>
+        <label>Email
+          <input type="email" name="email" required placeholder="name@example.com" />
+          <span class="error"></span>
+        </label>
+      </div>
+
+      <div class="grid-2">
+        <label>Phone
+          <input type="tel" name="phone" required pattern="^[0-9]{10}$" placeholder="10-digit number" />
+          <span class="error"></span>
+        </label>
+        <label>Room Type
+          <select name="room" required>
+            <option value="">Select</option>
+            <option>Single Occupancy</option>
+            <option>Double Sharing</option>
+            <option>Triple Sharing</option>
+            <option>Four Sharing</option>
+          </select>
+          <span class="error"></span>
+        </label>
+      </div>
+
+      <div class="grid-2">
+        <label>Check‑in Date
+          <input type="date" name="checkin" required />
+          <span class="error"></span>
+        </label>
+        <label>Duration
+          <select name="duration" required>
+            <option value="">Select</option>
+            <option>1 Month</option>
+            <option>3 Months</option>
+            <option>6 Months</option>
+            <option>12 Months</option>
+          </select>
+          <span class="error"></span>
+        </label>
+      </div>
+
+      <label>Special Requirements
+        <textarea name="message" rows="4" placeholder="Any preferences or notes"></textarea>
+      </label>
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <span id="formStatus" role="status" aria-live="polite"></span>
+      </div>
+    </form>
+
+    <section class="section">
+      <h2>Location & Contact</h2>
+      <ul class="contact-list">
+        <li><strong>Address:</strong> 123 Student Hub, University Road, Education District, Metro City - 110001</li>
+        <li><strong>Phone:</strong> +91-9876543210</li>
+        <li><strong>Email:</strong> info@elitepg.com</li>
+        <li><strong>Hours:</strong> Open 24/7</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Google Form (Embed)</h2>
+      <p>If using Google Forms, paste the iframe here.</p>
+      <!-- Replace src with your Google Form embed link. Set width 100% and adjust height. -->
+      <!--
+      <iframe src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true"
+              width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      -->
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="copy">© <span id="year"></span> Elite PG Residency</div>
+  </footer>
+
+  <script src="js/navigation.js"></script>
+  <script src="js/form.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

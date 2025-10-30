@@ -1,0 +1,8 @@
+{
+  "rooms": [
+    {"id": "single","name": "Single Room","price": 5000,"img":"images/rooms/single-room.jpg","features":["Private","Study Table","Storage"]},
+    {"id": "double","name": "Double Room","price": 3500,"img":"images/rooms/double-room.jpg","features":["Shared","Wardrobe","Balcony"]},
+    {"id": "triple","name": "Triple Room","price": 2800,"img":"images/rooms/triple-room.jpg","features":["Shared","Large Table"]},
+    {"id": "quad","name": "Quad Room","price": 2200,"img":"images/rooms/quad-room.jpg","features":["Budget","Shared Bathroom"]}
+  ]
+}

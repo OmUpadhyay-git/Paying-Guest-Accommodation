@@ -1,0 +1,10 @@
+# OS files
+Thumbs.db
+desktop.ini
+
+# Node / env
+node_modules/
+.env
+
+# VS Code
+.vscode/

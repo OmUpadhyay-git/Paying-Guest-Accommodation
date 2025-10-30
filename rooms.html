@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rooms & Pricing | Elite PG</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <header class="site-header small">
+    <nav class="nav">
+      <a class="brand" href="index.html"><img src="images/logo.png" alt="Elite PG logo" /><span>Elite PG Residency</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+      <ul id="nav-menu" class="nav-menu">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a class="active" href="rooms.html">Rooms</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a class="cta" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container section">
+    <h1>Rooms & Pricing</h1>
+
+    <div class="room-filters">
+      <input type="search" id="roomSearch" placeholder="Search rooms or features..." aria-label="Search rooms" />
+      <div class="tags">
+        <button class="tag" data-filter="single">Single</button>
+        <button class="tag" data-filter="double">Double</button>
+        <button class="tag" data-filter="triple">Triple</button>
+        <button class="tag" data-filter="quad">Four Sharing</button>
+      </div>
+    </div>
+
+    <div id="roomsGrid" class="card-grid">
+      <!-- Single -->
+      <article class="card" data-type="single">
+        <img src="images/rooms/single-room.jpg" alt="Single occupancy room" />
+        <div class="card-body">
+          <h3>Single Occupancy</h3>
+          <p class="price">₹8,000 <span>/month</span></p>
+          <ul class="features">
+            <li>Private room with attached bathroom</li>
+            <li>Air conditioning</li>
+            <li>Study desk and wardrobe</li>
+          </ul>
+          <details class="details">
+            <summary>More details</summary>
+            <p>Includes daily housekeeping and high‑speed Wi‑Fi.</p>
+          </details>
+          <a href="contact.html#enquiry" class="btn btn-primary">Enquire Now</a>
+        </div>
+      </article>
+
+      <!-- Double -->
+      <article class="card" data-type="double">
+        <img src="images/rooms/double-room.jpg" alt="Double sharing room" />
+        <div class="card-body">
+          <h3>Double Sharing</h3>
+          <p class="price">₹6,000 <span>/month</span></p>
+          <ul class="features">
+            <li>2 Beds with attached bathroom</li>
+            <li>AC/Fan options, lockers</li>
+            <li>Individual study spaces</li>
+          </ul>
+          <details class="details">
+            <summary>More details</summary>
+            <p>Popular choice for friends or batchmates.</p>
+          </details>
+          <a href="contact.html#enquiry" class="btn btn-primary">Enquire Now</a>
+        </div>
+      </article>
+
+      <!-- Triple -->
+      <article class="card" data-type="triple">
+        <img src="images/rooms/triple-room.jpg" alt="Triple sharing room" />
+        <div class="card-body">
+          <h3>Triple Sharing</h3>
+          <p class="price">₹4,500 <span>/month</span></p>
+          <ul class="features">
+            <li>3 Beds, common bathroom</li>
+            <li>Well‑ventilated, study area</li>
+            <li>High‑speed Wi‑Fi</li>
+          </ul>
+          <details class="details">
+            <summary>More details</summary>
+            <p>Balanced option for budget and comfort.</p>
+          </details>
+          <a href="contact.html#enquiry" class="btn btn-primary">Enquire Now</a>
+        </div>
+      </article>
+
+      <!-- Quad -->
+      <article class="card" data-type="quad">
+        <img src="images/rooms/quad-room.jpg" alt="Four sharing room" />
+        <div class="card-body">
+          <h3>Four Sharing</h3>
+          <p class="price">₹3,500 <span>/month</span></p>
+          <ul class="features">
+            <li>4 Beds, common bathroom</li>
+            <li>Shared study area</li>
+            <li>Storage facilities</li>
+          </ul>
+          <details class="details">
+            <summary>More details</summary>
+            <p>Best value for cost‑conscious residents.</p>
+          </details>
+          <a href="contact.html#enquiry" class="btn btn-primary">Enquire Now</a>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="copy">© <span id="year"></span> Elite PG Residency</div>
+  </footer>
+
+  <script src="js/navigation.js"></script>
+  <script>
+    const search = document.getElementById('roomSearch');
+    const tags = document.querySelectorAll('.tag');
+    const cards = document.querySelectorAll('#roomsGrid .card');
+
+    function applyFilter(term) {
+      cards.forEach(c=>{
+        const text = c.innerText.toLowerCase();
+        c.style.display = text.includes(term) ? '' : 'none';
+      });
+    }
+    search.addEventListener('input', e=> applyFilter(e.target.value.toLowerCase()));
+
+    tags.forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const type = btn.dataset.filter;
+        cards.forEach(c=>{
+          c.style.display = c.dataset.type === type ? '' : 'none';
+        });
+      });
+    });
+  </script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

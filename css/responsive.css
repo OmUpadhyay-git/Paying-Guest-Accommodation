@@ -1,0 +1,5 @@
+/* Additional responsive helpers */
+@media (max-width:480px){
+  .container{padding:0.5rem}
+  .hero-content h1{font-size:1.25rem}
+}
